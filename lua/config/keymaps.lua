@@ -12,8 +12,10 @@ vim.keymap.set('n', ',n', function()
   if vim.wo.number then
     vim.wo.number = false
     vim.wo.signcolumn = 'no'
+    vim.cmd(pcall(require, 'ibl') and 'IBLDisable' or '')
   else
     vim.wo.number = true
     vim.wo.signcolumn = 'yes'
+    vim.cmd(pcall(require, 'ibl') and 'IBLEnable' or '')
   end
 end, { desc = 'Toggle line numbers and sign column' })

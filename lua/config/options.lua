@@ -1,6 +1,7 @@
 local opt = vim.opt
 
 opt.background = 'dark'
+opt.clipboard = 'unnamedplus'
 opt.confirm = false
 opt.cursorline = true
 opt.expandtab = true

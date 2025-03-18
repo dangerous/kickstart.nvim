@@ -185,6 +185,13 @@ return {
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+    vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {})
+    vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, {})
+    vim.keymap.set('n', '<leader>gf', vim.lsp.buf.format, {})
+    vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
+    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
+
     -- Enable the following language servers
     --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
     --

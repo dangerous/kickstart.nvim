@@ -8,3 +8,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+-- start terminal in insert mode
+vim.api.nvim_create_autocmd('TermOpen', {
+  pattern = 'term://*',
+  command = 'startinsert',
+})

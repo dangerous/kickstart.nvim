@@ -19,3 +19,15 @@ vim.keymap.set('n', ',n', function()
     vim.cmd(pcall(require, 'ibl') and 'IBLEnable' or '')
   end
 end, { desc = 'Toggle line numbers and sign column' })
+
+vim.keymap.set('n', ',w', function()
+  vim.wo.wrap = not vim.wo.wrap
+end, { noremap = true, silent = true, desc = 'Toggle Word Wrap' })
+
+-- move virtually up and down wrapped lines, but use physical lines when used with a count
+vim.keymap.set('n', 'j', function()
+  return vim.v.count == 0 and 'gj' or 'j'
+end, { expr = true, noremap = true, silent = true })
+vim.keymap.set('n', 'k', function()
+  return vim.v.count == 0 and 'gk' or 'k'
+end, { expr = true, noremap = true, silent = true })

@@ -8,7 +8,7 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- toggle the number and sign columns
-vim.keymap.set('n', ',n', function()
+vim.keymap.set('n', '<leader>n', function()
   if vim.wo.number then
     vim.wo.number = false
     vim.wo.signcolumn = 'no'
@@ -20,7 +20,7 @@ vim.keymap.set('n', ',n', function()
   end
 end, { desc = 'Toggle line numbers and sign column' })
 
-vim.keymap.set('n', ',w', function()
+vim.keymap.set('n', '<leader>w', function()
   vim.wo.wrap = not vim.wo.wrap
 end, { noremap = true, silent = true, desc = 'Toggle Word Wrap' })
 

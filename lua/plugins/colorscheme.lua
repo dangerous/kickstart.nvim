@@ -1,15 +1,12 @@
 return {
-  'folke/tokyonight.nvim',
-  priority = 1000, -- Make sure to load this before all the other start plugins.
-  config = function()
-    ---@diagnostic disable-next-line: missing-fields
-    require('tokyonight').setup {
-      styles = {
-        keywords = { italic = false },
-      },
-    }
-
-    -- Load the colorscheme here.
-    vim.cmd.colorscheme 'tokyonight-night'
-  end,
+  { 'folke/tokyonight.nvim', opts = { styles = { keywords = { italic = false } } } },
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme 'catppuccin-mocha'
+    end,
+  },
 }

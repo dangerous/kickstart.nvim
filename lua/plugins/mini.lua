@@ -16,7 +16,15 @@ return { -- Collection of various small independent plugins/modules
     -- - sr)'  - [S]urround [R]eplace [)] [']
     -- require('mini.surround').setup()
 
-    require('mini.files').setup()
+    require('mini.files').setup {
+      mappings = {
+        close = '<esc>',
+      },
+      windows = {
+        preview = true,
+        width_preview = 80,
+      },
+    }
     vim.keymap.set('n', '<leader>e', function()
       MiniFiles.open()
     end)

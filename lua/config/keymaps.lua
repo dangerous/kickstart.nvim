@@ -10,7 +10,7 @@ set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 set('n', '<leader>v', '<cmd>e ~/.config/nvim/init.lua<CR>')
-set('n', '<leader>V', '<cmd>e ~/.config/nvim<CR>')
+set('n', '<leader>V', '<cmd>e ~/.config/nvim/lua<CR>')
 
 -- toggle the number and sign columns
 set('n', '<leader>n', function()

@@ -1,7 +1,7 @@
 local opt = vim.opt
 
 opt.background = 'dark'
-opt.clipboard = 'unnamedplus'
+opt.clipboard = ''
 opt.confirm = false
 opt.cursorline = true
 opt.expandtab = true
@@ -10,7 +10,7 @@ opt.inccommand = 'split'
 opt.linebreak = true
 opt.list = true
 opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-opt.mouse = 'a'
+opt.mouse = ''
 opt.number = true
 opt.scrolloff = 10
 opt.shiftround = true

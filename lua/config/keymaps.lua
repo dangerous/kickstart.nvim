@@ -36,3 +36,29 @@ end, { expr = true, noremap = true, silent = true })
 set('n', 'k', function()
   return vim.v.count == 0 and 'gk' or 'k'
 end, { expr = true, noremap = true, silent = true })
+
+-- yank to end of line (consistent with C and D)
+set('n', 'Y', 'y$', { desc = 'Yank to end of line' })
+
+-- git bindings
+set('n', '<leader>m', '<cmd>GitMessenger<CR>', { desc = 'Git [M]essenger' })
+set('n', '<leader>b', '<cmd>Git blame<CR>', { desc = 'Git [B]lame' })
+set('n', '<leader>gs', '<cmd>G<CR>', { desc = '[G]it [S]tatus' })
+set('n', '<leader>gj', '<cmd>diffget //3<CR>', { desc = 'Diffget right (//3)' })
+set('n', '<leader>gf', '<cmd>diffget //2<CR>', { desc = 'Diffget left (//2)' })
+
+-- comment toggle (neovim 0.10+ built-in gc/gcc)
+set('n', '<leader>,', 'gcc', { remap = true, desc = 'Toggle comment' })
+set('v', '<leader>,', 'gc', { remap = true, desc = 'Toggle comment' })
+
+-- toggle listchars
+set('n', '<leader>l', '<cmd>set list!<CR>', { desc = 'Toggle [L]istchars' })
+
+-- toggle paste
+set('n', '<leader>p', '<cmd>set paste!<CR>', { desc = 'Toggle [P]aste mode' })
+
+-- window resizing
+set('n', '+', '<cmd>resize +5<CR>', { desc = 'Increase window height' })
+set('n', '-', '<cmd>resize -5<CR>', { desc = 'Decrease window height' })
+set('n', '<leader>+', '<cmd>vertical resize +5<CR>', { desc = 'Increase window width' })
+set('n', '<leader>-', '<cmd>vertical resize -5<CR>', { desc = 'Decrease window width' })

@@ -1,12 +1,8 @@
 return {
-  { 'folke/tokyonight.nvim', opts = { styles = { keywords = { italic = false } } } },
   {
-    'catppuccin/nvim',
-    name = 'catppuccin',
-    lazy = false,
-    priority = 1000,
+    'dracula/vim',
     config = function()
-      vim.cmd.colorscheme 'catppuccin-mocha'
+      vim.cmd.colorscheme 'dracula'
     end,
   },
 }
